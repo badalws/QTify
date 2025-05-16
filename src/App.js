@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";  // Import BrowserRouter
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 function App() {
+  const [searchData, setSearchData] = useState([]);
+
+  useEffect(() => {
+    // Mock album data (Replace with API call later)
+    setSearchData([
+      { title: "Album 1", slug: "album-1" },
+      { title: "Album 2", slug: "album-2" },
+      { title: "Album 3", slug: "album-3" },
+    ]);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>  {/* Wrap everything inside BrowserRouter */}
+      <div className="App">
+        <Navbar searchData={searchData} />
+        <Hero />
+        <main>
+          <p>Welcome to QTify! Start building your amazing app.</p>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align elements */
+  background-color: #28a745; /* Adjust color */
+  padding: 10px 20px;
+  width: 100%; /* Prevent excessive width */
+}
+
+.logo img {
+  height: 40px; /* Ensure proper size */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centered in navbar */
+  flex-grow: 1; /* Makes search bar expand */
+}
+
+.search-bar input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  width: 300px; /* Adjust width */
+}
+
+.search-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.feedback-btn {
+  background-color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

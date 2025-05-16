@@ -1,0 +1,21 @@
+:root {
+  --primary-color: #28a745; /* Green color from Figma */
+  --background-color: #000000; /* Black */
+}
+
+.button {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}

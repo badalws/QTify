@@ -1,0 +1,26 @@
+:root {
+  --color-black: #000000; /* Ensure black */
+  --color-white: #ffffff;
+}
+
+.hero {
+  background-color: var(--color-black);
+  height: 270px;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;
+  padding: 20px; /* Adds space on both sides */
+  gap: 10px; /* Reduce space between text and image */
+}
+
+.heroText {
+  text-align: left;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.heroImage img {
+  max-width: 180px; /* Adjust image size */
+  height: auto;
+}
