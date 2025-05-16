@@ -10,8 +10,10 @@
 }
 
 .toggleButton {
-  background-color: #28a745;
-  color: white;
+  background-color: black;
+  font-size: large;
+  font-weight: bold;
+  color: #28a745;;
   padding: 8px 12px;
   border: none;
   border-radius: 5px;
@@ -20,6 +22,15 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 25px;
+}
+
+body {
+  background-color: black; /* Set the entire app background */
+  color: white;
+}
+
+.section {
+  background-color: black; /* Ensure Section background matches */
 }

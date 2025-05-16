@@ -8,10 +8,14 @@ const Section = ({ title, apiUrl }) => {
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
-    axios.get(apiUrl)
-      .then((response) => setAlbums(response.data))
-      .catch((error) => console.error("Error fetching albums:", error));
-  }, [apiUrl]);
+  axios.get(apiUrl)
+    .then((response) => {
+      console.log("Fetched Albums:", response.data.length); // Debugging API count
+      setAlbums(response.data);
+    })
+    .catch((error) => console.error("Error fetching albums:", error));
+}, [apiUrl]);
+
 
   return (
     <div className={styles.section}>
@@ -22,7 +26,7 @@ const Section = ({ title, apiUrl }) => {
         </button>
       </div>
       <div className={styles.grid}>
-        {albums.slice(0, expanded ? albums.length : 6).map((album) => (
+        {albums.slice(0, expanded ? albums.length : 7).map((album) => (
           <Card key={album.id} image={album.image} albumName={album.title} follows={album.follows} />
         ))}
       </div>
