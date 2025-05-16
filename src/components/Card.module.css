@@ -14,7 +14,6 @@
 }
 
 .cardContent {
-  padding: 10px;
   text-align: center;
   color: white;
   display: flex;
@@ -22,9 +21,21 @@
   align-items: flex-start;
 }
 
+.chipContainer {
+  background-color: white; /* White background behind the Chip */
+  padding: 5px; /* Adds spacing */
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 100%; /* Make it span full card width */
+  display: flex;
+  justify-content: flex-start; /* Keep the Chip aligned to the left */
+}
+
+
+
 .chip {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   font-size: 12px;
   margin-bottom: 5px;
 }

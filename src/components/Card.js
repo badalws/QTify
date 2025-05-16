@@ -7,7 +7,10 @@ const Card = ({ image, albumName, follows }) => {
     <div className={styles.card}>
       <img src={image} alt={albumName} className={styles.albumImage} />
       <div className={styles.cardContent}>
-        <Chip label={`${follows} Follows`} className={styles.chip} />
+        <div className={styles.chipContainer}>
+          <Chip label={`${follows} Follows`} className={styles.chip} />
+        </div>
+
         <h3 className={styles.albumName}>{albumName}</h3>
       </div>
     </div>
