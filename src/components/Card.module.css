@@ -10,28 +10,25 @@
 .albumImage {
   width: 120%;
   height: 200px;
-  object-fit: cover; /* Prevents overflow */
+  object-fit: cover;
 }
 
 .cardContent {
   text-align: center;
-  color: white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
 .chipContainer {
-  background-color: white; /* White background behind the Chip */
-  padding: 5px; /* Adds spacing */
+  background-color: white;
+  padding: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  width: 100%; /* Make it span full card width */
+  width: 100%;
   display: flex;
-  justify-content: flex-start; /* Keep the Chip aligned to the left */
+  justify-content: flex-start; 
 }
-
-
 
 .chip {
   background-color: black;
