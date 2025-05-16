@@ -34,6 +34,12 @@
   white-space: nowrap;
   width: 85%;
 }
+.sliderContainer {
+  width: 100%;
+  overflow: hidden; /* Ensures no horizontal scroll */
+  display: flex;
+  justify-content: flex-start; /* Aligns correctly */
+}
 
 .sliderContainer::-webkit-scrollbar {
   height: 8px;

@@ -43,7 +43,7 @@ const Section = ({ title, apiUrl }) => {
       {title === "New Albums" ? (
         <div className={styles.section}>
           <button className={styles.arrowLeft} onClick={scrollLeft}>←</button>
-          <div className={styles.sliderContainer} ref={sliderRef}>
+          <div className={styles.grid} ref={sliderRef}>
             {albums.map((album) => (
               <Card key={album.id} image={album.image} albumName={album.title} follows={album.follows} />
             ))}
