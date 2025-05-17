@@ -10,25 +10,16 @@ const Section = ({ title, apiUrl }) => {
 
   useEffect(() => {
     axios.get(apiUrl)
-      .then((response) => {
-        console.log(`Fetched Albums for ${title}:`, response.data.length);
-        setAlbums(response.data);
-      })
+      .then((response) => setAlbums(response.data))
       .catch((error) => console.error("Error fetching albums:", error));
   }, [apiUrl]);
 
-  // Function to scroll right
   const scrollRight = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollLeft += 300; // Scroll right by 300px
-    }
+    if (sliderRef.current) sliderRef.current.scrollLeft += 300;
   };
 
-  // Function to scroll left
   const scrollLeft = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollLeft -= 300; // Scroll left by 300px
-    }
+    if (sliderRef.current) sliderRef.current.scrollLeft -= 300;
   };
 
   return (
@@ -41,10 +32,10 @@ const Section = ({ title, apiUrl }) => {
       </div>
 
       {title === "New Albums" ? (
-        <div className={styles.section}>
+        <div className={styles.sliderWrapper}>
           <button className={styles.arrowLeft} onClick={scrollLeft}>←</button>
-          <div className={styles.grid} ref={sliderRef}>
-            {albums.map((album) => (
+          <div className={styles.sliderContainer} ref={sliderRef}>
+            {albums.slice(0, expanded ? albums.length : 7).map((album) => (
               <Card key={album.id} image={album.image} albumName={album.title} follows={album.follows} />
             ))}
           </div>
