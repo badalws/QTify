@@ -28,56 +28,9 @@
   gap: 20px;
 }
 
-.sliderWrapper {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.sliderContainer {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 20px;
-  padding-bottom: 10px;
-  white-space: nowrap;
-  width: 100%;
-}
-
-.sliderContainer > * {
-  flex: 0 0 220px;
-  width: 200px; 
-}
-
-.sliderContainer::-webkit-scrollbar {
-  height: 8px;
-}
-
-.sliderContainer::-webkit-scrollbar-thumb {
-  background-color: #ccc;
-  border-radius: 10px;
-}
-
-.arrowLeft,
-.arrowRight {
-  background-color: #28a745;
-  color: white;
-  font-size: 20px;
-  padding: 10px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.arrowLeft {
-  left: 10px; /* adjusted for better visibility */
-}
-
-.arrowRight {
-  right: 10px;
+.swiper-slide {
+  flex: 0 0 auto;
+  width: 250px;
 }
 
 body {

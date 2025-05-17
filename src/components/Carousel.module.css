@@ -1,0 +1,40 @@
+.carouselWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.carousel {
+  width: 90%;
+  margin: auto; /* Centers the carousel */
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  background-color: #28a745;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border: none;
+}
+
+/* Left Arrow - Positioned next to first card */
+.custom-prev {
+  left: 50px; /* Adjusted for better alignment */
+  visibility: visible !important;
+}
+
+/* Right Arrow - Positioned next to last card */
+.custom-next {
+  right: -50px; /* Moves it next to the last card */
+  visibility: visible !important;
+
+}

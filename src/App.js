@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <Hero />
         <Section title="Top Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/top" />
-        <Section title="New Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/new" isSlider={true} />
+        <Section title="New Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/new" />
       </div>
 
     </BrowserRouter>
