@@ -13,6 +13,7 @@ function App() {
         <Hero />
         <Section title="Top Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/top" />
         <Section title="New Albums" apiUrl="https://qtify-backend-labs.crio.do/albums/new" />
+        <Section title="Songs" apiUrl="https://qtify-backend-labs.crio.do/songs" isSongsSection={true} />
       </div>
 
     </BrowserRouter>

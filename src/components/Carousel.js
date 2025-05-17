@@ -10,18 +10,13 @@ import rightArrow from "../assets/icons/rightArrow.svg";
 const Carousel = ({ items, renderItem }) => {
   return (
     <div className={styles.carouselWrapper}>
-      {/* Left Navigation Button */}
-      <button className={`${styles.arrow} custom-prev`}>
-        <img src={leftArrow} alt="Left" />
-      </button>
-
       <Swiper
         modules={[Navigation]}
         spaceBetween={20}
         slidesPerView={"auto"}
         navigation={{
-          nextEl: ".custom-next",
-          prevEl: ".custom-prev",
+          nextEl: `.${styles.rightArrow}`,
+          prevEl: `.${styles.leftArrow}`,
         }}
         breakpoints={{
           320: { slidesPerView: 2 },
@@ -34,12 +29,15 @@ const Carousel = ({ items, renderItem }) => {
             {renderItem(item)}
           </SwiperSlide>
         ))}
-      </Swiper>
 
-      {/* Right Navigation Button */}
-      <button className={`${styles.arrow} custom-next`}>
-        <img src={rightArrow} alt="Right" />
-      </button>
+        {/* Navigation Buttons Inside Swiper */}
+        <div className={`${styles.arrow} ${styles.leftArrow}`}>
+          <img src={leftArrow} alt="Left" />
+        </div>
+        <div className={`${styles.arrow} ${styles.rightArrow}`}>
+          <img src={rightArrow} alt="Right" />
+        </div>
+      </Swiper>
     </div>
   );
 };
